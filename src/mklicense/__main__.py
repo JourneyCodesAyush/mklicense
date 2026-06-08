@@ -3,8 +3,7 @@ from datetime import datetime
 from pathlib import Path
 
 LICENSES: dict[str, str] = {
-    "mit": """
-MIT License
+    "mit": """MIT License
 
 Copyright (c) [year] [fullname]
 
@@ -26,8 +25,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """,
-    "unlicense": """
-This is free and unencumbered software released into the public domain.
+    "unlicense": """This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
 distribute this software, either in source code form or as a compiled
@@ -54,12 +52,14 @@ For more information, please refer to <https://unlicense.org>
 """,
 }
 
-def valid_year(value: str)->bool:
+
+def valid_year(value: str) -> int:
     year: int = int(value)
     if year < 1970 or year > datetime.now().year:
         raise argparse.ArgumentTypeError(f"Invalid year: {value}")
 
-    return year;
+    return year
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(
@@ -73,9 +73,10 @@ def main() -> None:
         help="License type to add to the project",
     )
     parser.add_argument(
-         "--year",
+        "--year",
         type=valid_year,
-        default=datetime.now().year, help="Year of the license"
+        default=datetime.now().year,
+        help="Year of the license",
     )
     parser.add_argument(
         "-d",
