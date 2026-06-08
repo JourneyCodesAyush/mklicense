@@ -2,7 +2,7 @@ import argparse
 from datetime import datetime
 from pathlib import Path
 
-from .licenses import LICENSES
+from mklicense.licenses import LICENSES
 
 
 def valid_year(value: str) -> int:
