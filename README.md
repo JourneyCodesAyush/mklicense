@@ -26,7 +26,7 @@ mklicense mit "Your Name"
 ## Usage
 
 ```bash
-mklicense [-h] [--year YEAR] [-d DIR] [{mit,unlicense}] author
+mklicense [-h] [--year YEAR] [-d DIR] [{mit,unlicense,gplv3,apache2}] author
 ```
 
 ```bash
@@ -58,6 +58,18 @@ mklicense mit "Ayush" --dir ./my-project
 
 - `mit` — MIT License
 - `unlicense` — The Unlicense (public domain)
+- `gplv3` — GNU General Public License v3.0
+- `apache2` — Apache License 2.0
+
+---
+
+## Development
+
+Run tests:
+
+```bash
+uv run pytest
+```
 
 ---
 
