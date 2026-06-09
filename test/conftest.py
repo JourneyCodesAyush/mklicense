@@ -5,6 +5,7 @@ from tempfile import TemporaryDirectory
 
 ROOT_PATH = os.getcwd()
 
+
 @pytest.fixture
 def tmp_dir():
     sample_dir = TemporaryDirectory(dir=ROOT_PATH)
