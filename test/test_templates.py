@@ -1,4 +1,3 @@
-import pytest
 from mklicense.licenses import LICENSES
 
 
