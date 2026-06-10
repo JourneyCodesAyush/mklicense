@@ -2,6 +2,7 @@
 
 ![Python Version](https://img.shields.io/badge/python-3.14+-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
+![Latest Release](https://img.shields.io/github/v/release/JourneyCodesAyush/mklicense)
 
 **mklicense** is a minimal CLI tool to generate license files for your projects.
 
